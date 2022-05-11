@@ -50,7 +50,7 @@ int Train::getLength() {
       }
     }
   }
-  return len;
+  //return len;
 }
 
 int Train::getOpCount() {
