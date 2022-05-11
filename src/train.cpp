@@ -10,7 +10,7 @@ Train::Cage* Train::creatc(bool light) {
 
 void Train::addCage(bool light) {
   if (first->next == nullptr) {
-      Cage* cage = creatc(light);
+    Cage* cage = creatc(light);
     first->next = cage;
     cage->prev = first;
     cage->next = first;
@@ -32,21 +32,20 @@ int Train::getLength() {
   countOp = 0;
   int len = 0;
   int zam = 0;
-  while (first -> light == true) {
+  while (first->light == true) {
     countOp++;
     len++;
-    f = f -> next;
-    if (f -> light == true) {
-      f -> light = false;
+    f = f->next;
+    if (f->light == true) {
+      f->light = false;
       zam = len;
       while (zam > 0) {
-        f = f -> prev;
+        f = f->prev;
         countOp++;
         zam--;
       }
-      if (!(f -> light)) {
+      if (!(f->light)) {
         return len;
-      }
     }
   }
 }
