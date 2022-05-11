@@ -48,9 +48,9 @@ int Train::getLength() {
       if (!(f->light)) {
         return len;
       }
+      len = zam;
     }
   }
-  //return len;
 }
 
 int Train::getOpCount() {
