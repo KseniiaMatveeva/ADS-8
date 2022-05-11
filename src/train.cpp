@@ -45,12 +45,12 @@ int Train::getLength() {
         countOp++;
         zam--;
       }
-      if (!(f->light)) {
+      if (!(f->light))
         return len;
-      }
       len = zam;
     }
   }
+  return len;
 }
 
 int Train::getOpCount() {
