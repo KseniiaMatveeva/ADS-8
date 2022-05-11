@@ -10,19 +10,20 @@ Train::Cage* Train::creatc(bool light) {
 
 void Train::addCage(bool light) {
   if (first->next == nullptr) {
-    cage = creatc(light);
-    first->next = cage;
-    cage->prev = first;
-    cage->next = first;
-    first->prev = cage;
+    Cage* c = creatc(light);
+    first->next = c;
+    c->prev = first;
+    c->next = first;
+    first->prev = c;
   } else {
     if (first == nullptr) {
       first = creatc(light);
     }
-    first->prev->next = creatc(light);
-    cage->next = first;
-    cage->prev = first->prev;
-    first->prev = cage;
+    Cage* c = creatc(light);
+    first->prev->next = c;
+    c->next = first;
+    c->prev = first->prev;
+    first->prev = c;
   }
 }
 
@@ -49,6 +50,7 @@ int Train::getLength() {
       }
     }
   }
+  return len;
 }
 
 int Train::getOpCount() {
