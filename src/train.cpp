@@ -50,7 +50,7 @@ int Train::getLength() {
       len = zam;
     }
   }
-  return len;
+  //return len;
 }
 
 int Train::getOpCount() {
