@@ -47,7 +47,7 @@ int Train::getLength() {
       }
       if (f->light == false)
         return len;
-      zam = len;
+      len = zam;
     }
   }
   return zam;
