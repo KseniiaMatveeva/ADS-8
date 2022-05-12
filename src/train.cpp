@@ -10,15 +10,16 @@ Train::Cage* Train::creatc(bool light) {
 
 void Train::addCage(bool light) {
   if (first == nullptr) {
-    first = creatc(light);
+    Cage* c = creatc(light);
+    first = c;
   } else if (first->next == nullptr) {
-    c = creatc(light);
+    Cage* c = creatc(light);
     first->next = c;
     c->prev = first;
     c->next = first;
     first->prev = c;
   } else {
-    c = creatc(light);
+    Cage* c = creatc(light);
     first->prev->next = c;
     c->next = first;
     c->prev = first->prev;
